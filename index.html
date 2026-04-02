@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>AR.js Lithium Atom - Hiro Marker</title>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  </head>
+  <body style="margin: 0px; overflow: hidden;">
+    
+    <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
+
+      <a-marker type="pattern" url="pattern-markerB.patt">
+        
+        <a-entity id="atom" position="0 0 0" scale="0.3 0.3 0.3" rotation="-90 0 0">
+          
+          <a-sphere 
+            radius="0.7" 
+            src="waternormals.jpg"
+            color="red"
+            segments-height="32">
+          </a-sphere>
+        
+          <a-entity rotation="0 0 0">
+            <a-torus arc="360" radius="5" radius-tubular="0.03" segments-tubular="128" color="black" opacity="0.5" scale="0.38 1 1">
+              <a-entity animation="property: rotation; to: 0 0 360; loop: true; dur: 4100; easing: linear">
+                <a-sphere position="5 0 0" radius="0.25" color="red"></a-sphere>
+              </a-entity>
+            </a-torus>
+          </a-entity>
+
+          <a-entity rotation="0 0 60">
+            <a-torus arc="360" radius="5" radius-tubular="0.03" segments-tubular="128" color="black" opacity="0.5" scale="0.38 1 1">
+              <a-entity animation="property: rotation; to: 0 0 360; loop: true; dur: 5800; easing: linear">
+                <a-sphere position="5 0 0" radius="0.25" color="blue"></a-sphere>
+              </a-entity>
+            </a-torus>
+          </a-entity>
+
+          <a-entity rotation="0 0 120">
+            <a-torus arc="360" radius="5" radius-tubular="0.03" segments-tubular="128" color="black" opacity="0.5" scale="0.38 1 1">
+              <a-entity animation="property: rotation; to: 0 0 360; loop: true; dur: 7500; easing: linear">
+                <a-sphere position="5 0 0" radius="0.25" color="green"></a-sphere>
+              </a-entity>
+            </a-torus>
+          </a-entity>
+
+        </a-entity>
+      </a-marker>
+
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
